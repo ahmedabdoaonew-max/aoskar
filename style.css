@@ -1100,3 +1100,202 @@ body.rtl .floating-social {
   .cred-stats { grid-template-columns: 1fr 1fr; }
   .credentials, .publications { padding: 4rem 1.2rem; }
 }
+/* =========================================
+   CV BANNER - AOSKAR
+   ========================================= */
+
+.cv-banner {
+  width: 100%;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 5;
+}
+
+.cv-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1rem 1.1rem;
+
+  border-radius: 18px;
+
+  background: rgba(15, 15, 30, 0.82);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* CV Icon */
+
+.cv-icon {
+  width: 52px;
+  height: 52px;
+
+  min-width: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: rgba(239, 68, 68, 0.12);
+
+  border: 1px solid rgba(239, 68, 68, 0.25);
+
+  font-size: 25px;
+}
+
+
+/* CV Text */
+
+.cv-text {
+  flex: 1;
+  min-width: 0;
+}
+
+
+.cv-label {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 1rem;
+
+  font-weight: 800;
+
+  line-height: 1.3;
+
+  margin-bottom: 0.25rem;
+}
+
+
+.cv-text p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 0.72rem;
+
+  line-height: 1.5;
+}
+
+
+/* CV Button */
+
+.cv-banner-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 0.55rem;
+
+  padding: 0.75rem 1rem;
+
+  border-radius: 11px;
+
+  background: #ef4444;
+
+  color: #ffffff;
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.cv-banner-btn span {
+  font-size: 1.05rem;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.cv-banner-btn:hover {
+  background: #dc2626;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 24px rgba(239, 68, 68, 0.28);
+}
+
+
+.cv-banner-btn:hover span {
+  transform: translateX(-4px);
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .cv-banner {
+    margin-top: 1rem;
+  }
+
+
+  .cv-banner-content {
+    display: grid;
+
+    grid-template-columns: 50px 1fr;
+
+    gap: 0.75rem;
+
+    padding: 0.9rem;
+
+    border-radius: 16px;
+  }
+
+
+  .cv-icon {
+    width: 50px;
+
+    height: 50px;
+
+    min-width: 50px;
+
+    font-size: 23px;
+  }
+
+
+  .cv-label {
+    font-size: 0.95rem;
+  }
+
+
+  .cv-text p {
+    font-size: 0.68rem;
+  }
+
+
+  .cv-banner-btn {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    padding: 0.75rem 1rem;
+
+    font-size: 0.8rem;
+  }
+
+}
